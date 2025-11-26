@@ -1,0 +1,30 @@
+Legends: Monsters and Heroes
+Design Documentation
+1. Introduction
+Legends: Monsters and Heroes is a Java-based turn-based role-playing game (RPG) where players control Heroes engaged in battles against Monsters while navigating a grid-based GameMap. The game includes character classes, different monsters, spells, weapons, items, and a turn-based battle system, designed using Object-Oriented Programming (OOP) principles.
+2. Overall Architecture
+The system follows a modular layered architecture, divided into:
+- Core Game Logic: Game, GameMap, Battle
+- Entities/Models: Hero, Warrior, Paladin, Sorcerer, Monster, Dragon, Exoskeleton, SpiritMonster
+- Items: Weapon, Armor, Potion, Spell
+- Utils/Data Handling: FileLoader
+- Input/Output: GameIO
+- Main Driver: Main class
+4. Major Class Descriptions
+Game.java: Core controller of the application, initializes map, handles gameplay flow.
+Main.java: Starts the game by calling new Game().start().
+GameMap.java: Manages the 2D map grid consisting of Tile objects.
+Tile.java & TileType.java: Represents each cell of the map.
+
+5. Character System
+Living.java: Abstract base class for all living entities.
+Hero.java: Hero attributes: Strength, Dexterity, Agility, Experience, Money.
+Monster.java: Monster attributes: Damage, Defense, DodgeChance.
+
+7. Battle System
+Battle.java handles turn-based combat between Heroes and Monsters.
+Damage calculation, turn sequence, rewards distribution.
+9. Design Principles Used
+Encapsulation, Inheritance, Polymorphism, Modular Design, Factory Pattern.
+12. Conclusion
+This project successfully applies OOP principles to build a modular and extensible RPG system.
